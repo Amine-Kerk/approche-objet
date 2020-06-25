@@ -1,6 +1,7 @@
 package essais;
 
 import entites.Personne;
+import entites.AdressePostale;
 
 public class TestPersonne {
 
@@ -9,17 +10,12 @@ public class TestPersonne {
 		Personne pers1 = new Personne();
 		
 		
-pers1.nom="Kerkoub";
-pers1.prenom="Amine";
-pers1.adresse="adresse1";
+		AdressePostale adresse1 = new AdressePostale ();
+		pers1.adresse=adresse1;
 
-       Personne pers1 = new Personne();
-       
-       
-pers2.nom="François";
-pers2.prenom="Jean";
-pers2.adresse="adresse2";
-
+		Personne pers2 = new Personne ();
+		AdressePostale adresse2 = new AdressePostale ();
+		pers2.adresse = adresse2;
 
 
 	}
