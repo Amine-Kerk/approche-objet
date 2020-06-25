@@ -1,19 +1,19 @@
 package entites;
 
-//classe a 3 attributs
+//classe a 3 attributs nom ,prenom et
 
 public class Personne {
 
 	public String nom;
 	public String prenom;
 	public AdressePostale adresse;
-
+// constructeur 
 	public Personne(String nvNom, String nvPrenom) {
-
+//valorisation des variables du constructeur
 		this.nom = nvNom;
 		this.prenom = nvPrenom;
 	}
-
+//constructeur des variables on rajoutant l'adresse
 	public Personne(String nvNom, String nvPrenom, AdressePostale nvAdresse) {
 
 		this.nom = nvNom;
@@ -22,14 +22,14 @@ public class Personne {
 
 	}
 
-	// créer une methode qui va afficher le nom en majiscule
+	// créer une methode qui va afficher l'adresse
 
 	public void nomMethode() {
 
 		System.out.println(nom.toUpperCase() + " " + prenom);
 
 	}
-
+//utilsation des getters et setters
 	public String getNom() {
 		return nom;
 	}
@@ -53,8 +53,6 @@ public class Personne {
 	public void setAdresse(AdressePostale adresse) {
 		this.adresse = adresse;
 	}
-	
-	
 	
 	
     

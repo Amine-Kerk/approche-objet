@@ -13,21 +13,18 @@ public class TestPersonne {
 
 		Personne pers2 = new Personne("Baubet", "jean-pierre");
 
-	
+	//utilisation de la methode d'affichage 
 		pers1.nomMethode();
 		
-
+    //changement d'un paramétre 
 		pers1.setNom("Marie");
-
+    //affichage du paraméter changé
 		pers1.nomMethode();
+
 		
-		
-		String toto=pers1.getNom() ;
-		
-		AdressePostale lolo=pers1.getAdresse();
-		
-		System.out.println(pers1.getNom());
-		
+		pers2.nomMethode();
+		pers2.setNom("Pernaut");
+		pers2.nomMethode();
 	}
 
 }

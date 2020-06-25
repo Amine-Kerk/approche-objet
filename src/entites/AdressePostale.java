@@ -22,6 +22,14 @@ public class AdressePostale {
 		this.ville = nvVille;
 
 	}
+	
+	// créer une methode qui va afficher l'adresse
+
+		public void adresseMethode() {
+
+			System.out.println(numeroRue+" "+libelleRue+" "+codePostal+" "+ville);
+
+		}
 
 }
 
