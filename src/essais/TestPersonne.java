@@ -22,10 +22,6 @@ pers2.adresse="adresse2";
 
 
 
-
-
-
-
 	}
 
 }
