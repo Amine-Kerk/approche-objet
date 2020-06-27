@@ -1,6 +1,6 @@
 package entites;
 
-//classe a 3 attributs nom ,prenom et
+//classe a 3 attributs nom prenom et adresse
 
 public class Personne {
 
