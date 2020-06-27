@@ -18,13 +18,16 @@ public class TestPersonne {
 		
     //changement d'un paramétre 
 		pers1.setNom("Marie");
-    //affichage du paraméter changé
+    //affichage du paramétere changé
 		pers1.nomMethode();
 
 		
 		pers2.nomMethode();
 		pers2.setNom("Pernaut");
 		pers2.nomMethode();
+		
+		
+		
 	}
 
 }

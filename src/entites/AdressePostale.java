@@ -12,11 +12,11 @@ public class AdressePostale {
 	// ajoutez lui un constructeur avec les 4
 	// paramètres permettant de valoriser tous les attributs de la classe
 
-	public AdressePostale(int nvNumeroRue, String nvLibelleRue, int nvCodePostal, String nvVille) {
+public AdressePostale(int NumeroRue, String nvLibelleRue, int nvCodePostal, String nvVille) {
 
 		// hydratation ou valorisation des variables
 
-		this.numeroRue = nvNumeroRue;
+		this.numeroRue = NumeroRue;
 		this.libelleRue = nvLibelleRue;
 		this.codePostal = nvCodePostal;
 		this.ville = nvVille;

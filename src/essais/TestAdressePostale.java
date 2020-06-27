@@ -14,6 +14,8 @@ public class TestAdressePostale {
 //affichage des adresses par la methode
 		adresse1.adresseMethode();
 		adresse2.adresseMethode();
+		
+		//adresse1.setAdresse("")
 	}
 
 }
