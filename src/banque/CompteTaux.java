@@ -13,6 +13,7 @@ public class CompteTaux extends Compte {
 //nouveau constructeur en rajoutant le nouveau attribut "taux"
 		
 		public CompteTaux(String numCompte, Double soldeComte, Double taux) {
+			//appel au constructeur de la classe mere
 			super(numCompte, soldeComte);
 			this.taux = taux;
 		}
