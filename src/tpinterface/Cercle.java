@@ -1,6 +1,6 @@
-package entites;
+package tpinterface;
 
-public class Cercle {
+public class Cercle implements  ObjetGeometrique  {
 
 	private double ray;
 	
@@ -23,16 +23,18 @@ public class Cercle {
 	// les methodes de calcule et affichage du resultat 
 	
 	
-	public double calculPeriC() {
-		double perimetre = 2 * 3.14 * ray;
+	public double calculPeri() {
+		double perimetre = 2 * Math.PI * ray;
 		return perimetre;
 
 	}
 
-	public double calculSurfC() {
-		double surface = ray * ray * 3.14;
+	public double calculSurf() {
+		double surface = ray * ray * Math.PI;
 		return surface;
 	}
-	
-	
+
+	public String getType() {
+		return "Cercle";
+		}
 }

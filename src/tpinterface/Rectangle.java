@@ -1,6 +1,6 @@
-package entites;
+package tpinterface;
 
-public class Rectangle {
+public class Rectangle implements  ObjetGeometrique {
 
 	private double longeur;
 	private double largeur;
@@ -14,11 +14,11 @@ public class Rectangle {
 
 	
 //methodes pour calcul du perimetre et de la surface 
-	public double calculPeriR() {
+	public double calculPeri() {
 		double perimetre = (largeur + longeur) * 2;
 		return perimetre;
 	}
-	public double calculSurfR() {
+	public double calculSurf() {
 		double surface = longeur * largeur;
 		return surface;
 	}
@@ -42,4 +42,10 @@ public class Rectangle {
 	public void setLargeur(double largeur) {
 		this.largeur = largeur;
 	}
+
+
+	public String getType() {
+		return "Rectangle";
+		}
+	
 }
