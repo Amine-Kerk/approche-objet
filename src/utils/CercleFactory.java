@@ -1,11 +1,12 @@
 package utils;
 
-import entites.Cercle;
+import tpinterface.Cercle;
 
 public class CercleFactory {
 
-	public static Cercle builderCercle(double ray) {
-		return new Cercle(ray);
+	public static Cercle builderCercle(double pray) {
+		Cercle cer=new Cercle(pray);
+		return cer;
 		
 	}
 
