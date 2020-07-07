@@ -6,6 +6,9 @@ import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
 
+import tri.PlusGrandeVilleComparator;
+import tri.PlusPetiteVilleComparator;
+
 public class Application {
 
 	public static void main(String[] args) {
@@ -40,12 +43,10 @@ public class Application {
 				listeVilles.add(ville);
 
 			}
-			
-			
-			
 
+//recherche des informations de Montpellier
 			String search = "Montpellier";
-			
+
 			Ville maville = new Ville();
 
 			for (int i = 0; i < listeVilles.size(); i++) {
@@ -57,53 +58,103 @@ public class Application {
 			}
 
 			System.out.println(maville);
-            System.out.println("-----------------------------------------------------------------");
-            
-            int nbPopHerault=0;
-            for (int i = 0; i < listeVilles.size(); i++) {
-            	if(listeVilles.get(i).getCodeDepartement().equals("34")) {
-            		nbPopHerault=nbPopHerault+listeVilles.get(i).getPopulationTotale();
-            	}
-          
-            }
-            
-            System.out.println("la population en Hérault est de :"+nbPopHerault);
-            
-            System.out.println("-----------------------------------------------------------------");
-            
-            
-            
-            
-            
-            
-          
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+			System.out.println("-----------------------------------------------------------------");
+			// recherche de la population dans l'herault
+			int nbPopHerault = 0;
+			for (int i = 0; i < listeVilles.size(); i++) {
+				if (listeVilles.get(i).getCodeDepartement().equals("34")) {
+					nbPopHerault = nbPopHerault + listeVilles.get(i).getPopulationTotale();
+				}
+
+			}
+
+			System.out.println("la population en Hérault est de :" + nbPopHerault);
+
+			System.out.println("-----------------------------------------------------------------");
+			// recherche de la ville dans le 34 qui a la plus petite population
+			int popMin = Integer.MAX_VALUE;
+			Ville villeMin = null;
+			for (int i = 0; i < listeVilles.size(); i++) {
+				Ville laville = listeVilles.get(i);
+
+				if (laville.getCodeDepartement().equals("34") && laville.getPopulationTotale() < popMin) {
+					popMin = laville.getPopulationTotale();
+					villeMin = laville;
+				}
+
+			}
+
+			System.out.println("la plus petite ville du departement: " + villeMin);
+
+			System.out.println("-----------------------------------------------------------------");
+
+			// Affichez les 10 plus grandes villes du département
+
+			// Alimentation d'une liste ne contenant que les villes du département 34
+
+			ArrayList<Ville> villesDept = new ArrayList<>();
+
+			for (int i = 0; i < listeVilles.size(); i++) {
+				Ville v = listeVilles.get(i);
+				if (v.getCodeDepartement().equals("34")) {
+					villesDept.add(v);
+
+				}
+
+			}
+
+			// Afficher les 10 plus grandes villes du département
+			System.out.println("----------------------------------------------------");
+			System.out.println("Affichage des 10 plus grandes villes du département 34");
+
+			Collections.sort(villesDept, new PlusGrandeVilleComparator());
+
+			for (int i = 0; i < 10; i++) {
+				System.out.println(villesDept.get(i));
+			}
+
+			// Afficher les 10 plus petites villes du département
+			System.out.println("----------------------------------------------------");
+			System.out.println("Affichage des 10 plus grandes villes du département 34");
+
+			Collections.sort(villesDept, new PlusPetiteVilleComparator());
+
+			for (int i = 0; i < 10; i++) {
+				System.out.println(villesDept.get(i));
+			}
+
+			// Affichez la population de toute la région Occitanie
+			System.out.println("----------------------------------------------------");
+			System.out.println("la population de toute la région Occitanie");
+
+			int somPopRegion = 0;
+
+			for (int i = 0; i < listeVilles.size(); i++) {
+
+				if (listeVilles.get(i).getCodeRegion().equals("76")) {
+
+					somPopRegion += listeVilles.get(i).getPopulationTotale();
+				}
+
+			}
+
+			
+			System.out.println("la population en Occitanie est de : " + somPopRegion);
+
+			System.out.println("----------------------------------------------------");
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 			System.out.println("Nombre de lignes :" + lignes.size());
 		} catch (IOException e) {
 			System.out.println(e.getMessage());
